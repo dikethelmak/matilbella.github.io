@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="vivaxd.css">
+    <title>Test</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="video-playlist">
+            <video  id="videoplayer" width="100%" controls >
+                <source src="videos/0.mp4" type="video/mp4" >                
+            </video>
+        </div>
+    </div>
+
+    <div class="container">
+        <h3>Our Videos</h3>
+        <div class="row">
+            <a href="#" onclick="switchTo('02')">
+                <div>
+                    <video id="videoplayer" poster="images/6.jpg" width="100%">
+                        <source src="videos/1.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </a>
+            <a href="#" onclick="switchTo('03')">
+                <div>
+                    <video id="videoplayer" poster="images/9.jpg" width="100%">
+                        <source src="videos/4.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </a>  
+            
+            <a href="#" onclick="switchTo('04')">
+                <div>
+                    <video id="videoplayer" poster="images/6.jpg" width="100%">
+                        <source src="videos/3.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </a>
+
+            <a href="#" onclick="switchTo('05')">
+                <div>
+                    <video id="videoplayer" poster="images/5.jpg" width="100%">
+                        <source src="videos/4.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </a>
+        </div>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+
+        <!-- second row -->
+        <div class="row">
+            <a href="#" onclick="switchTo('06')">
+                <div>
+                    <video id="videoplayer" poster="images/6.jpg" width="100%">
+                        <source src="videos/3.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </a>
+            <a href="#" onclick="switchTo('03')">
+                <div>
+                    <video id="videoplayer" poster="images/9.jpg" width="100%">
+                        <source src="videos/3.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </a>
+        
+            <a href="#" onclick="switchTo('03')">
+                <div>
+                    <video id="videoplayer" poster="images/6.jpg" width="100%">
+                        <source src="videos/3.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </a>
+        
+            <a href="#" onclick="switchTo('03')">
+                <div>
+                    <video id="videoplayer" poster="images/5.jpg" width="100%">
+                        <source src="videos/3.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+        function switchTo(a) {
+            if (a == '02') {
+                var video = document.getElementById('videoplayer');
+                var videoList = document.getElementById('video-list');
+                video.pause(); 
+                video.src = "videos/1.mp4";
+                video.load(); 
+                video.play(); 
+                return false;
+            }
+
+            if (a == '03') {
+                var video = document.getElementById('videoplayer');
+                video.pause(); 
+                video.src = "videos/2.mp4"; 
+                video.load();
+                video.play(); 
+                return false;
+            }
+
+            if (a == '04') {
+                var video = document.getElementById('videoplayer');
+                video.pause();
+                video.src = "videos/3.mp4";
+                video.load(); 
+                video.play(); 
+                return false;
+            }
+
+            if (a == '05') {
+                var video = document.getElementById('videoplayer');
+                video.pause();
+                video.src = "videos/4.mp4";
+                video.load();
+                video.play();
+                return false;
+            }
+
+            if (a == '06') {
+                var video = document.getElementById('videoplayer');
+                video.pause();
+                video.src = "videos/5.mp4";
+                video.load();
+                video.play();
+                return false;
+            }
+        }
+        </script>
+</body>
+</html>
